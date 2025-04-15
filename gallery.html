@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | SRG Motors - Quality Servicing and Repairs in Limerick</title>
+    <meta name="description" content="View our gallery of SRG Motors workshop and facilities. We provide quality auto repair services in Limerick including full service and pre-NCT checks.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo_srg.jpeg" type="image/jpeg">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page-header.css">
+    
+    <style>
+        /* Additional Gallery Styles */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+        }
+        
+        .gallery-overlay p {
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .gallery-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-category {
+            padding: 8px 20px;
+            margin: 5px;
+            background-color: var(--white-color);
+            border: 1px solid var(--light-gray);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .gallery-category.active,
+        .gallery-category:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo_srg.jpeg" alt="SRG Motors Logo">
+                        <h1>SRG <span>Motors</span></h1>
+                    </a>
+                </div>
+                
+                <button class="mobile-nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('images/workshop4.jpg');">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Our Gallery</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Workshop Gallery</h2>
+                <p>Take a look at our facilities and the work we do</p>
+            </div>
+            
+            <div class="gallery-categories">
+                <div class="gallery-category active" data-filter="all">All</div>
+                <div class="gallery-category" data-filter="workshop">Workshop</div>
+                <div class="gallery-category" data-filter="services">Services</div>
+                <div class="gallery-category" data-filter="equipment">Equipment</div>
+            </div>
+            
+            <div class="gallery-container">
+                <!-- Workshop Images -->
+                <div class="gallery-item" data-category="workshop">
+                    <a href="images/workshop1.jpg" data-lightbox="gallery" data-title="Our Modern Workshop Facility">
+                        <img src="images/workshop1.jpg" alt="SRG Motors Workshop">
+                        <div class="gallery-overlay">
+                            <h3>Modern Workshop</h3>
+                            <p>Our spacious and well-equipped workshop facility</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item" data-category="workshop">
+                    <a href="images/workshop2.jpg" data-lightbox="gallery" data-title="Vehicle Maintenance Area">
+                        <img src="images/workshop2.jpg" alt="SRG Motors Workshop">
+                        <div class="gallery-overlay">
+                            <h3>Maintenance Area</h3>
+                            <p>Where we perform routine maintenance and servicing</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Services Images -->
+                <div class="gallery-item" data-category="services">
+                    <a href="images/workshop3.jpg" data-lightbox="gallery" data-title="Full Service in Progress">
+                        <img src="images/workshop3.jpg" alt="Full Service">
+                        <div class="gallery-overlay">
+                            <h3>Full Service</h3>
+                            <p>Our mechanics performing a comprehensive vehicle service</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item" data-category="services">
+                    <a href="images/workshop4.jpg" data-lightbox="gallery" data-title="Pre-NCT Check">
+                        <img src="images/workshop4.jpg" alt="Pre-NCT Check">
+                        <div class="gallery-overlay">
+                            <h3>Pre-NCT Check</h3>
+                            <p>Thorough inspection to ensure your vehicle passes the NCT</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Equipment Images -->
+                <div class="gallery-item" data-category="equipment">
+                    <a href="images/workshop5.jpg" data-lightbox="gallery" data-title="Diagnostic Equipment">
+                        <img src="images/workshop5.jpg" alt="Diagnostic Equipment">
+                        <div class="gallery-overlay">
+                            <h3>Diagnostic Equipment</h3>
+                            <p>State-of-the-art tools for accurate vehicle diagnostics</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item" data-category="equipment">
+                    <a href="images/workshop1.jpg" data-lightbox="gallery" data-title="Diesel Injector Testing Equipment">
+                        <img src="images/workshop1.jpg" alt="Diesel Injector Testing">
+                        <div class="gallery-overlay">
+                            <h3>Injector Testing</h3>
+                            <p>Specialized equipment for diesel injector testing and calibration</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- More Workshop Images -->
+                <div class="gallery-item" data-category="workshop">
+                    <a href="images/workshop2.jpg" data-lightbox="gallery" data-title="Vehicle Lift Area">
+                        <img src="images/workshop2.jpg" alt="Vehicle Lift Area">
+                        <div class="gallery-overlay">
+                            <h3>Vehicle Lift Area</h3>
+                            <p>Our hydraulic lifts allow for easy access to all parts of your vehicle</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item" data-category="workshop">
+                    <a href="images/workshop3.jpg" data-lightbox="gallery" data-title="Workshop Overview">
+                        <img src="images/workshop3.jpg" alt="Workshop Overview">
+                        <div class="gallery-overlay">
+                            <h3>Workshop Overview</h3>
+                            <p>A view of our clean and organized workshop space</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- More Services Images -->
+                <div class="gallery-item" data-category="services">
+                    <a href="images/workshop4.jpg" data-lightbox="gallery" data-title="Brake System Repair">
+                        <img src="images/workshop4.jpg" alt="Brake System Repair">
+                        <div class="gallery-overlay">
+                            <h3>Brake System Repair</h3>
+                            <p>Professional brake system maintenance and repair</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item" data-category="services">
+                    <a href="images/workshop5.jpg" data-lightbox="gallery" data-title="Engine Diagnostics">
+                        <img src="images/workshop5.jpg" alt="Engine Diagnostics">
+                        <div class="gallery-overlay">
+                            <h3>Engine Diagnostics</h3>
+                            <p>Advanced computer diagnostics to identify engine issues</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- More Equipment Images -->
+                <div class="gallery-item" data-category="equipment">
+                    <a href="images/workshop1.jpg" data-lightbox="gallery" data-title="Wheel Alignment System">
+                        <img src="images/workshop1.jpg" alt="Wheel Alignment System">
+                        <div class="gallery-overlay">
+                            <h3>Wheel Alignment System</h3>
+                            <p>Precision equipment for accurate wheel alignment</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item" data-category="equipment">
+                    <a href="images/workshop2.jpg" data-lightbox="gallery" data-title="Air Conditioning Service Equipment">
+                        <img src="images/workshop2.jpg" alt="AC Service Equipment">
+                        <div class="gallery-overlay">
+                            <h3>AC Service Equipment</h3>
+                            <p>Specialized tools for air conditioning system maintenance</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta" style="background-image: url('images/workshop3.jpg');">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Ready to Experience Our Quality Service?</h2>
+                <p>Contact us today to schedule an appointment or learn more about our services.</p>
+                <a href="contact.html" class="btn btn-lg">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>SRG Motors</h3>
+                    <p>Your trusted family-run auto repair shop in Limerick, providing quality servicing and repairs for all makes and models.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/SRGMotors" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/srg_motors/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@srgmotors" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html">Full Service</a></li>
+                        <li><a href="services.html">Pre-NCT Check</a></li>
+                        <li><a href="services.html">Diesel Injector Testing</a></li>
+                        <li><a href="services.html">Brake System Repairs</a></li>
+                        <li><a href="services.html">Engine Diagnostics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Unit H3 Eastway Business Park, Ballysimon Road, Limerick V94 AW89</p>
+                    <p><i class="fas fa-phone-alt"></i> 061 294 566</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:30 AM - 6:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sat: 9:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="current-year">2025</span> SRG Motors. All Rights Reserved. | <a href="#">Privacy Policy</a> - powered by <a href="https://moreydigital.ie/" target="_blank">Morey Digital</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Gallery Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery filtering
+            const categories = document.querySelectorAll('.gallery-category');
+            const items = document.querySelectorAll('.gallery-item');
+            
+            categories.forEach(category => {
+                category.addEventListener('click', function() {
+                    // Remove active class from all categories
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    
+                    // Add active class to clicked category
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Show/hide items based on filter
+                    items.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Initialize Lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': 'Image %1 of %2'
+            });
+        });
+    </script>
+</body>
+</html>
